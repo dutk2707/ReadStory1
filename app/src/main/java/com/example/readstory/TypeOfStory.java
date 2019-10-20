@@ -1,7 +1,7 @@
 package com.example.readstory;
 
 public class TypeOfStory {
-    private String nameTypeStory;
+    public String nameTypeStory;
     private int imageTypeStory;
 
     public TypeOfStory(){

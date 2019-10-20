@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvTypeStoryItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kiếm Hiệp"
+        android:textSize="@dimen/_25ssp"
+        android:textColor="#000000"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center">
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStoryName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

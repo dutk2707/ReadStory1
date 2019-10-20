@@ -11,25 +11,32 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class TypeOfStoryAdapter extends RecyclerView.Adapter<TypeOfStoryAdapter.MyViewHoder> {
+public class TypeOfStoryAdapter extends RecyclerView.Adapter<TypeOfStoryAdapter.TypeStoryViewHoder> {
     ArrayList<TypeOfStory> typeOfStoryArrayList;
-    public TypeOfStoryAdapter(ArrayList<TypeOfStory> typeOfStoryArrayList){
+    OnClickListener callBack;
+    public TypeOfStoryAdapter(ArrayList<TypeOfStory> typeOfStoryArrayList, OnClickListener callBack) {
         this.typeOfStoryArrayList = typeOfStoryArrayList;
+        this.callBack = callBack;
     }
 
     @NonNull
     @Override
-    public MyViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TypeStoryViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.type_of_story, parent, false);
-        return null;
+        return new TypeStoryViewHoder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TypeOfStoryAdapter.MyViewHoder holder, int position) {
-        TypeOfStory typeOfStory = typeOfStoryArrayList.get(position);
+    public void onBindViewHolder(@NonNull TypeOfStoryAdapter.TypeStoryViewHoder holder, int position) {
+        final TypeOfStory typeOfStory = typeOfStoryArrayList.get(position);
         holder.imageViewTypeStory.setImageResource(typeOfStory.getImageTypeStory());
         holder.textViewTypeStory.setText(typeOfStory.getNameTypeStory());
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callBack.onTypeStoryClick(typeOfStory.nameTypeStory);
+            }
+        });
     }
 
     @Override
@@ -37,13 +44,17 @@ public class TypeOfStoryAdapter extends RecyclerView.Adapter<TypeOfStoryAdapter.
         return typeOfStoryArrayList.size();
     }
 
-    public class MyViewHoder extends RecyclerView.ViewHolder{
+    public class TypeStoryViewHoder extends RecyclerView.ViewHolder{
         ImageView imageViewTypeStory;
         TextView textViewTypeStory;
-        public MyViewHoder(@NonNull View itemView) {
+        public TypeStoryViewHoder(@NonNull View itemView) {
             super(itemView);
             imageViewTypeStory = itemView.findViewById(R.id.ivTypeStory);
             textViewTypeStory = itemView.findViewById(R.id.tvTypeStory);
         }
+    }
+    interface OnClickListener {
+            void onTypeStoryClick(String nameTypeStory);
+            void onNameStoryClick(String storyContent);
     }
 }

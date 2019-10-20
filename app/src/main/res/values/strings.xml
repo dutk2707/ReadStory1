@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">ReadStory</string>
+    <string name="ngôn_tình_1">Nội dung ngôn tình 1</string>
+    <string name="ngôn_tình_2">Nội dung ngôn tình 2</string>
+    <string name="ngôn_tình_3">Nội dung ngôn tình 3</string>
+    <string name="kinh_dị_1">Nội dung kinh dị 1</string>
+    <string name="kinh_dị_2">Nội dung kinh dị 2</string>
+    <string name="kinh_dị_3">Nội dung kinh dị 3</string>
+    <string name="trinh_thám_1">Nội dung trinh thám 1</string>
+    <string name="trinh_thám_2">Nội dung trinh thám 2</string>
+    <string name="trinh_thám_3">Nội dung trinh thám 3</string>
+    <string name="lịch_sử_1">Nội dung lịch sử 1</string>
+    <string name="lịch_sử_2">Nội dung lịch sử 2</string>
+    <string name="lịch_sử_3">Nội dung lịch sử 3</string>
+    <string name="văn_học_1">Nội dung văn học 1</string>
+    <string name="văn_học_2">Nội dung văn học 2</string>
+    <string name="văn_học_3">Nội dung văn học 3</string>
+    <string name="kiếm_hiệp_1">Nội dung kiếm hiệp 1</string>
+    <string name="kiếm_hiệp_2">Nội dung kiếm hiệp 2</string>
+    <string name="kiếm_hiệp_3">Nội dung kiếm hiệp 3</string>
 </resources>
